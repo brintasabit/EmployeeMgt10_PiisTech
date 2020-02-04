@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill\EmployeeDataManager.cs" />
     <Compile Include="Bill\EmployeeManager.cs" />
+    <Compile Include="Bill\SearchManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

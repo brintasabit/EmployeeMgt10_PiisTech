@@ -52,6 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext\ProjectDbContext.cs" />
+    <Compile Include="Migrations\202002040712010_InitialCreate.cs" />
+    <Compile Include="Migrations\202002040712010_InitialCreate.designer.cs">
+      <DependentUpon>202002040712010_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002040719118_EmployeeDataModelAdded.cs" />
+    <Compile Include="Migrations\202002040719118_EmployeeDataModelAdded.designer.cs">
+      <DependentUpon>202002040719118_EmployeeDataModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +72,14 @@
       <Project>{dbba75d3-fa5c-40e2-a1b1-8fe7514f4cca}</Project>
       <Name>EmployeeManagement.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002040712010_InitialCreate.resx">
+      <DependentUpon>202002040712010_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002040719118_EmployeeDataModelAdded.resx">
+      <DependentUpon>202002040719118_EmployeeDataModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

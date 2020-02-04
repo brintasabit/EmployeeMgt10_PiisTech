@@ -11,5 +11,7 @@ namespace EmployeeManagement.DatabaseContext.DatabaseContext
     public class ProjectDbContext:DbContext
     {
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<EmployeeData> EmployeeDatas { get; set; }
+
     }
 }
