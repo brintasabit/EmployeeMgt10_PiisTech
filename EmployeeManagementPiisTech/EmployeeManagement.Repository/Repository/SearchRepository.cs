@@ -10,22 +10,36 @@ namespace EmployeeManagement.Repository.Repository
 {
     public class SearchRepository
     {
-        public bool SearchEmployees(Employee _employee)
+        public bool SearchEmployees(string employeeId)
         {
             bool result = false;
-            List<Employee>employees=new List<Employee>();
+            List<Employee> employees = new List<Employee>();
             ProjectDbContext dbContext = new ProjectDbContext();
-            Employee emp = dbContext.Employees.Where(x => x.EmployeeId == _employee.EmployeeId).FirstOrDefault();
-            
-                if (emp.EmployeeId == _employee.EmployeeId)
-                {
-                    //Employee em=new Employee();
+            var emp = dbContext.Employees.Where(x => x.EmployeeId == employeeId).FirstOrDefault();
 
-                    result = true;
-                   // employees.Add(em);
-                }
 
-                return result;
+            if (emp != null)
+            {
+
+                //Employee em=new Employee();
+
+                result = true;
+                // employees.Add(em);
+
+            }
+
+
+            return result;
+
+        }
+        public Employee GetEmployees(string employeeId)
+        {
+            bool result = false;
+            Employee employees = new Employee();
+            ProjectDbContext dbContext = new ProjectDbContext();
+            employees = dbContext.Employees.Where(x => x.EmployeeId == employeeId).FirstOrDefault();
+
+            return employees;
 
         }
     }

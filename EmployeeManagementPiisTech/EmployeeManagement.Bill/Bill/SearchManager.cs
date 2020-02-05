@@ -11,9 +11,13 @@ namespace EmployeeManagement.Bill.Bill
     public class SearchManager
     {
         SearchRepository _searchRepository=new SearchRepository();
-        public bool SearchEmployees(Employee _employee)
+        public bool SearchEmployees(string employeeId)
         {
-            return _searchRepository.SearchEmployees(_employee);
+            return _searchRepository.SearchEmployees(employeeId);
+        }
+        public Employee GetEmployees(string employeeId)
+        {
+            return _searchRepository.GetEmployees(employeeId);
         }
     }
 }

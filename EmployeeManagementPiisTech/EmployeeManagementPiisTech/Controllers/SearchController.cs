@@ -17,39 +17,36 @@ namespace EmployeeManagementPiisTech.Controllers
         public ActionResult SearchEmployee()
         {
             Employee employee = new Employee();
-
+            
             return View(employee);
         }
         [HttpPost]
-        public ActionResult SearchEmployee(Employee employee)
+        public ActionResult SearchEmployee(string employeeId)
         {
-            string message = "";
-            //message+="Code: "+category.Code;
-            message += "Name: " + employee.FirstName;
-            message += "Name: " + employee.LastName;
-
-
-            if (_searchManager.SearchEmployees(employee))
-            {
-                message += "Exists!";
-            }
-            else
-            {
-                message += "Not Exists!";
-            }
+            Employee employee=new Employee();
+            
+         
+         
+           
 
             return View(employee);
+
+
+
+
         }
-        public JsonResult CheckEmployee(int EmpId)
+
+       
+        public JsonResult CheckEmployee(string EmpId)
         {
             string message = "";
             bool result = false;
-            Employee employee = new Employee();
-            employee.EmployeeId = EmpId;
+           // Employee employee = new Employee();
             
-            if (_searchManager.SearchEmployees(employee))
+            
+            if (_searchManager.SearchEmployees(EmpId))
             {
-                message += "Successful!";
+                message += " Successful!";
                 result = true;
             }
             else
@@ -59,6 +56,12 @@ namespace EmployeeManagementPiisTech.Controllers
             }
 
             return Json(new { result = result, message = message });
+        }
+        public ActionResult ShowEmployee(string employeeId)
+        {
+            Employee emp = new Employee();
+            emp = _searchManager.GetEmployees(employeeId);
+            return View(emp);
         }
     }
 }

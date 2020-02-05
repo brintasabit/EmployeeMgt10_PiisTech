@@ -17,5 +17,12 @@ namespace EmployeeManagement.Repository.Repository
             dbContext.Employees.Add(_employee);
             return dbContext.SaveChanges() > 0;
         }
+        public bool DeleteEmployee(Employee _employee)
+        {
+            ProjectDbContext dbContext = new ProjectDbContext();
+            dbContext.Employees.Remove(_employee);
+            return dbContext.SaveChanges()>0;
+
+        }
     }
 }

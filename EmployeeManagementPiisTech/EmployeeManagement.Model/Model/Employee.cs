@@ -21,6 +21,6 @@ namespace EmployeeManagement.Model.Model
         public string LastSalaryIncrementDate { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedDate { get; set; }
-        public int EmployeeId { get; set; }
+        public string EmployeeId { get; set; }
     }
 }

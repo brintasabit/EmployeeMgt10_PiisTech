@@ -52,13 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext\ProjectDbContext.cs" />
-    <Compile Include="Migrations\202002040712010_InitialCreate.cs" />
-    <Compile Include="Migrations\202002040712010_InitialCreate.designer.cs">
-      <DependentUpon>202002040712010_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002040719118_EmployeeDataModelAdded.cs" />
-    <Compile Include="Migrations\202002040719118_EmployeeDataModelAdded.designer.cs">
-      <DependentUpon>202002040719118_EmployeeDataModelAdded.cs</DependentUpon>
+    <Compile Include="Migrations\202002050731084_EmployeeIdTypeChanged.cs" />
+    <Compile Include="Migrations\202002050731084_EmployeeIdTypeChanged.designer.cs">
+      <DependentUpon>202002050731084_EmployeeIdTypeChanged.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,11 +70,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002040712010_InitialCreate.resx">
-      <DependentUpon>202002040712010_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002040719118_EmployeeDataModelAdded.resx">
-      <DependentUpon>202002040719118_EmployeeDataModelAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002050731084_EmployeeIdTypeChanged.resx">
+      <DependentUpon>202002050731084_EmployeeIdTypeChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

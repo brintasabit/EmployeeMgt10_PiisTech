@@ -125,6 +125,7 @@
     <Content Include="Views\Register\RegisterEmployee.cshtml" />
     <Content Include="Views\LogIn\LogInEmployee.cshtml" />
     <Content Include="Views\Search\SearchEmployee.cshtml" />
+    <Content Include="Views\Search\ShowEmployee.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
