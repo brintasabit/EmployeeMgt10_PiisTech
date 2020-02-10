@@ -57,7 +57,7 @@ namespace EmployeeManagementPiisTech.Controllers
             }
             else
             {
-                message += "Not Saved!";
+                message += "Not Successful!";
                 result = false;
             }
 
